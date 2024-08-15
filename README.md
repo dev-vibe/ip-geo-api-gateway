@@ -29,12 +29,10 @@ This project is a simple API gateway server that provides the country name assoc
    npm install
    ```
 3. **Create a .env file:** 
-   Create a .env file in the root of the project with the following environment variables:
-   ```plaintext
-    IPSTACK_API_KEY=your_ipstack_api_key
-    IPINFO_API_KEY=your_ipinfo_api_key
-    PORT=3000
-   ```
+   Copy the .env.example file and rename it to .env. Update the values as needed.
+   ```bash
+    cp .env.example .env
+    ```
 
 ## Running the Server
 
@@ -59,7 +57,7 @@ The server will start on the port specified in the .env file (default: 3000).
     - On success:
         ```json
         {
-            "country": "United States"
+            "country": "US"
         }
         ```
     - On error (e.g., missing IP or rate limit exceeded):
